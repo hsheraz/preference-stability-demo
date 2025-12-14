@@ -8,18 +8,28 @@ The original study applied the stability-level model to real participant decisio
 This demo abstracts away domain-specific features and instead uses **synthetic binary decision scenarios** to illustrate how preference stability is defined and measured.
 
 ## Stability Definition
-An agent’s preferences are considered **stable** if, when presented with the *same decision scenario at different times*, they make the same choice.  
+An participants preferences are considered **stable** if, when presented with the *same decision scenario at different times*, they make the same choice.  
 Stability is measured as the fraction of repeated scenarios in which the agent’s decision remains consistent.
 
 ## Synthetic Experiment
-- Synthetic agents make binary decisions (Option A vs Option B).
+- Synthetic participants make binary decisions (Option A vs Option B).
 - A subset of scenarios is repeated to test consistency.
-- Agents differ in their intrinsic consistency, modeled via abstract “agent types” with no real-world meaning.
-- Stability scores are computed per agent.
+- participants differ in their intrinsic consistency.
+- Stability scores are computed per participant.
+
+In this demo, “participants” refer to simulated decision-makers and do not correspond to real individuals.
+
+## How to run
+
+This demo has no external dependencies beyond NumPy.
+
+```bash
+python run_demo.py
+```
 
 ## Results (Synthetic Demonstration)
 
-The table below summarizes per-agent stability scores under two abstract agent types.
+The table below summarizes per-participant stability scores under two abstract participant types.
 
 | Agent Type | Mean Stability | Std Dev | Count |
 |-----------|----------------|---------|-------|
@@ -27,7 +37,7 @@ The table below summarizes per-agent stability scores under two abstract agent t
 | Type 1 (less stable) | 0.647 | — | 111 |
 | **Overall** | **0.783** | **0.195** | **200** |
 
-Stability is defined as the fraction of repeated scenarios for which an agent made the same decision.
+Stability is defined as the fraction of repeated scenarios for which a participant made the same decision.
 
 <details>
 <summary>Raw console output</summary>
@@ -39,7 +49,7 @@ Overall mean stability: 0.783
 Overall std stability:  0.195
 Min / Max:              0.200 / 1.000
 
-By agent type (abstract):
+By participant type:
   Type 0 (more stable)   mean=0.954  n=89
   Type 1 (less stable)   mean=0.647  n=111
  ```
@@ -52,10 +62,9 @@ This confirms that the stability metric responds predictably to controlled incon
 
 This demo is based on the methodology introduced in the following paper:
 
-Haleema Sheraz, S. C. Kremer, G. Skorburg, G. Taylor,  
-W. Sinnott-Armstrong, K. Boerstler.  
-*Towards Stable Preferences for Stakeholder-aligned Machine Learning.*  
-NeurIPS 2023 Workshop on AI Ethics.
+*Haleema Sheraz* et al.,  
+*Towards Stable Preferences for Stakeholder-aligned Machine Learning*  
+(NeurIPS 2023 Workshop on AI Ethics)
 
 Paper: https://neurips.cc/virtual/2023/77051
 
