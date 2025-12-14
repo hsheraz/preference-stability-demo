@@ -9,7 +9,7 @@ This demo abstracts away domain-specific features and instead uses **synthetic b
 
 ## Stability Definition
 An participants preferences are considered **stable** if, when presented with the *same decision scenario at different times*, they make the same choice.  
-Stability is measured as the fraction of repeated scenarios in which the agent’s decision remains consistent.
+Stability is measured as the fraction of repeated scenarios in which the participant’s decision remains consistent.
 
 ## Synthetic Experiment
 - Synthetic participants make binary decisions (Option A vs Option B).
@@ -31,7 +31,7 @@ python run_demo.py
 
 The table below summarizes per-participant stability scores under two abstract participant types.
 
-| Agent Type | Mean Stability | Std Dev | Count |
+| Participant Type | Mean Stability | Std Dev | Count |
 |-----------|----------------|---------|-------|
 | Type 0 (more stable) | 0.954 | — | 89 |
 | Type 1 (less stable) | 0.647 | — | 111 |
